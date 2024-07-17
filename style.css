@@ -1,0 +1,69 @@
+body {
+    padding-top: 50px;
+    }
+    .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 22px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #bdbdbd;
+    }
+    
+    .wrapper h2 {
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 10px;
+    }
+    
+    .wrapper-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #bdbdbd;
+    list-style: none;
+    
+    transform:translateX(-100%);/* Початкове розташування за межами екрану */
+    display: none;
+    }
+    
+    .wrapper-list-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    }
+    
+    
+    .wrapper-list-item:hover a {
+    color: #FAB305;
+    font-weight: 600;
+    }
+    
+    .wrapper-list-item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    }
+    
+    .wrapper:hover .wrapper-list,
+    .wrapper h2:hover + .wrapper-list {
+    transform: translateX(0);
+    display: block;
+    }
+    
+    .wrapper:hover h2,
+    .wrapper h2:hover {
+    display: none;
+    }
